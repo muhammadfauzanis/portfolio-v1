@@ -5,10 +5,11 @@ import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import Link from 'next/link';
 import { BsLinkedin } from 'react-icons/bs';
-import { FaGithubSquare } from 'react-icons/fa';
+import { FaGithub, FaGithubSquare, FaLinkedin } from 'react-icons/fa';
 import { useSectionInView } from '@/lib/useInView';
 import { useActiveSectionContext } from '@/containers/active-section';
-import { Mail } from 'lucide-react';
+import { DownloadCloud } from 'lucide-react';
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Intro() {
   const { ref } = useSectionInView('#home', 0.5);
@@ -66,15 +67,27 @@ export default function Intro() {
         damping={1e-1}
         triggerOnce={true}
       >
-        <h1 className="mb-10 mt-4 px-4 text-2xl sm:text-4xl">
-          <span className="font-medium !leading-[1.5] ">
-            Grow your business with a new website.
-          </span>{' '}
-          <p className="text-[14px]">
-            Resonance is a full-service creative studio creating beautiful
-            digital experiences and products.
-          </p>
-        </h1>
+        <h1 className="mb-4 mt-4 px-4 text-3xl md:text-6xl">Muhammad Fauzan</h1>
+        <p className="md:text-lg mb-6">
+          <TypeAnimation
+            sequence={[
+              'Software Engineer',
+              3000,
+              'BackEnd Developer',
+              3000,
+              'FrontEnd Developer',
+              3000,
+              'Fullstack Developer',
+              3000,
+              'Cloud Engineer',
+              3000,
+            ]}
+            wrapper="span"
+            speed={50}
+            cursor={true}
+            repeat={Infinity}
+          />
+        </p>
       </Fade>
 
       <motion.div
@@ -85,32 +98,27 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <Link
-          href="#contact"
+        <a
+          href="/Muhammad Fauzan CV English Version Update.pdf"
+          download
           className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 dark:bg-white/10 active:scale-105 transition"
-          onClick={() => {
-            setActiveSection('#contact');
-            setTimeOfLastClick(Date.now());
-          }}
         >
-          Connect <Mail color={'#9ca3af'} />
+          Resume <DownloadCloud color={'#9ca3af'} />
+        </a>
+
+        <Link href="https://www.linkedin.com/in/muhammadfauzanis/">
+          <FaLinkedin
+            size={30}
+            className="text-gray-950 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-300 transition-all duration-300"
+          />
         </Link>
 
-        <a
-          className="bg-gray-900 p-4 text-white flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/mohamed-rhanmi/"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          className="bg-gray-900 p-4 text-white flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href=""
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
+        <Link href="https://github.com/muhammadfauzanis">
+          <FaGithub
+            size={30}
+            className="text-gray-950 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-300 transition-all duration-300"
+          />
+        </Link>
       </motion.div>
     </section>
   );
