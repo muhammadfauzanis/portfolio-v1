@@ -30,9 +30,9 @@ export default function Header({ links }: HeaderProps) {
             >
               <NextLink
                 className={clsx(
-                  'flex w-full items-center justify-start gap-x-5  px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 group',
+                  'flex w-full items-center justify-start gap-x-5  px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-100 group',
                   {
-                    'text-gray-950 dark:text-gray-300 ':
+                    'text-gray-950 dark:text-gray-100 ':
                       activeSection === link.hash,
                     'text-gray-500 dark:text-gray-500 ':
                       activeSection !== link.hash,
@@ -46,9 +46,9 @@ export default function Header({ links }: HeaderProps) {
               >
                 <hr
                   className={clsx(
-                    'border-[1.5px] group-hover:border-gray-950 dark:border-gray-500 dark:group-hover:border-gray-300 w-6 group-hover:w-12 transition-all duration-300',
+                    'border-[1.5px] group-hover:border-gray-950 dark:border-gray-500 dark:group-hover:border-gray-100 w-10 group-hover:w-20 transition-all duration-500',
                     {
-                      ' border-gray-950 dark:border-gray-300 w-12':
+                      ' border-gray-950 dark:border-gray-100 w-20':
                         activeSection === link.hash,
                       ' border-gray-500 dark:border-gray-500':
                         activeSection !== link.hash,
@@ -59,7 +59,7 @@ export default function Header({ links }: HeaderProps) {
                 <p>{link.nameEng}</p>
                 {link.hash === activeSection && (
                   <motion.span
-                    className=" text-gray-950 dark:text-gray-300"
+                    className=" text-gray-950 dark:text-gray-100"
                     layoutId="activeSection"
                     transition={{
                       type: 'spring',

@@ -8,7 +8,7 @@ import Navbar from '@/components/navbar';
 import CursorLight from '@/components/CursorLight';
 
 const outfit = Outfit({
-  weight: '400',
+  weight: '500',
   subsets: ['latin'],
   display: 'swap',
 });
