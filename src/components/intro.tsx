@@ -106,14 +106,17 @@ export default function Intro() {
           Resume <DownloadCloud color={'#9ca3af'} />
         </a>
 
-        <Link href="https://www.linkedin.com/in/muhammadfauzanis/">
+        <Link
+          href="https://www.linkedin.com/in/muhammadfauzanis/"
+          target="_blank"
+        >
           <FaLinkedin
             size={30}
             className="text-gray-950 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-300 transition-all duration-300"
           />
         </Link>
 
-        <Link href="https://github.com/muhammadfauzanis">
+        <Link href="https://github.com/muhammadfauzanis" target="_blank">
           <FaGithub
             size={30}
             className="text-gray-950 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-300 transition-all duration-300"

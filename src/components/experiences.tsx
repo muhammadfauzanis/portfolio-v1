@@ -5,6 +5,7 @@ import SectionHeading from './section-heading';
 import { motion } from 'framer-motion';
 import { Fade } from 'react-awesome-reveal';
 import { experiencesData } from '@/lib/data';
+import ReadMore from './readmore';
 
 const Experiences = () => {
   const { ref } = useSectionInView('#projects', 0.1);
@@ -37,17 +38,15 @@ const Experiences = () => {
       >
         {experiencesData.map((experience, index) => (
           <div
-            className="w-[50%] m-auto flex justify-between gap-x-10 pt-4"
+            className="w-[80%] lg:w-[40%] m-auto flex flex-col-reverse lg:flex-row justify-between gap-x-8 pt-4"
             key={index}
           >
-            <div className="w-4/5">
+            <div className="lg:w-3/4">
               <h3 className="text-xl font-semibold">{experience.position}</h3>
               <p className="">{experience.company} </p>
-              <p className="text-justify text-gray-500">
-                {experience.description}
-              </p>
+              <ReadMore text={experience.description} maxLength={600} />
             </div>
-            <div className="w-1/5">{experience.duration}</div>
+            <div className="lg:w-1/4 lg:text-sm">{experience.duration}</div>
           </div>
         ))}
       </Fade>
