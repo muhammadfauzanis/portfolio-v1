@@ -14,8 +14,8 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: 'Frontend | Advance',
-  description: 'Frontend Advance Personal portfolio',
+  title: 'Muhammad Fauzan',
+  description: 'Muhammad Fauzan Personal Portfolio',
 };
 
 export default function RootLayout({
