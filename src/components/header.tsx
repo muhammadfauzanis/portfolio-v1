@@ -20,7 +20,7 @@ export default function Header({ links }: HeaderProps) {
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
       >
-        <ul className="flex flex-col items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500">
+        <ul className="flex flex-col items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 border-gray-500">
           {links.map((link) => (
             <motion.li
               className="flex items-center justify relative w-full"
@@ -46,7 +46,7 @@ export default function Header({ links }: HeaderProps) {
               >
                 <hr
                   className={clsx(
-                    'border-[1.5px] group-hover:border-gray-950 dark:border-gray-500 dark:group-hover:border-gray-100 w-10 group-hover:w-20 transition-all duration-500',
+                    'border-[1.5px] group-hover:border-gray-950  dark:group-hover:border-gray-100 w-10 group-hover:w-20 transition-all duration-500',
                     {
                       ' border-gray-950 dark:border-gray-100 w-20':
                         activeSection === link.hash,
