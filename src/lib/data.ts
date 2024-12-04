@@ -10,6 +10,10 @@ export const links: Link[] = [
     hash: '#about',
   },
   {
+    nameEng: 'Experiences',
+    hash: '#experiences',
+  },
+  {
     nameEng: 'Projects',
     hash: '#projects',
   },
@@ -33,6 +37,7 @@ export const projectsData: ProjectInfo[] = [
     ],
     imageUrl: '/Swap-device.png',
     link: 'https://www.google.com',
+    working_duration: 'Coming Soon',
   },
   {
     title: 'FurniScan',
@@ -49,6 +54,7 @@ export const projectsData: ProjectInfo[] = [
     ],
     imageUrl: '/FurniScan.png',
     link: 'https://www.google.com',
+    working_duration: 'May 2024 - Jun 2024',
   },
   {
     title: 'Jardin Resto App',
@@ -56,6 +62,7 @@ export const projectsData: ProjectInfo[] = [
     tags: ['React', 'JavaScript', 'MongoDB', 'Tailwind CSS', 'Express.js'],
     imageUrl: '/jardin-app.png',
     link: 'https://www.google.com',
+    working_duration: 'Oct 2023 - Des 2023',
   },
 ];
 

@@ -12,6 +12,7 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  working_duration,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -46,6 +47,8 @@ export default function Project({
               </li>
             ))}
           </ul>
+
+          <div className="pt-4">{working_duration}</div>
         </div>
 
         <Image
