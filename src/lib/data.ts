@@ -38,6 +38,7 @@ export const projectsData: ProjectInfo[] = [
     imageUrl: '/Swap-device.png',
     link: 'https://www.google.com',
     working_duration: 'Coming Soon',
+    projectUrl: '',
   },
   {
     title: 'FurniScan',
@@ -55,6 +56,8 @@ export const projectsData: ProjectInfo[] = [
     imageUrl: '/FurniScan.png',
     link: 'https://www.google.com',
     working_duration: 'May 2024 - Jun 2024',
+    projectUrl:
+      'https://drive.google.com/file/d/1pkKeDZNiynDq_b6dkvaLF4XqEa3OdcLq/view?usp=sharing',
   },
   {
     title: 'Jardin Resto App',
@@ -63,6 +66,7 @@ export const projectsData: ProjectInfo[] = [
     imageUrl: '/jardin-app.png',
     link: 'https://www.google.com',
     working_duration: 'Oct 2023 - Des 2023',
+    projectUrl: 'https://jardin-resto-app.vercel.app/',
   },
 ];
 

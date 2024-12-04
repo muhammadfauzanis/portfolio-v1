@@ -9,6 +9,7 @@ export type ProjectInfo = {
   imageUrl: string;
   link: string;
   working_duration: string;
+  projectUrl: string;
 };
 
 export type ExperienceInfo = {

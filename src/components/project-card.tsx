@@ -4,6 +4,8 @@ import { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { ProjectInfo } from '@/lib/types';
+import Link from 'next/link';
+import { FaArrowUpRightFromSquare } from 'react-icons/fa6';
 
 type ProjectProps = ProjectInfo;
 
@@ -13,6 +15,7 @@ export default function Project({
   tags,
   imageUrl,
   working_duration,
+  projectUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -49,7 +52,15 @@ export default function Project({
             ))}
           </ul>
 
-          <div className="pt-4">{working_duration}</div>
+          <div className="pt-4 pb-4">{working_duration}</div>
+
+          <Link
+            href={projectUrl}
+            target="_blank"
+            className="w-fit bg-gray-900 text-white px-4 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 dark:bg-white/10 active:scale-105 transition"
+          >
+            Visit <FaArrowUpRightFromSquare size={15} />
+          </Link>
         </div>
 
         <Image
