@@ -11,6 +11,13 @@ export type ProjectInfo = {
   working_duration: string;
 };
 
+export type ExperienceInfo = {
+  position: string;
+  company: string;
+  description: string;
+  duration: string;
+};
+
 export type Link = {
   nameEng: string;
   hash: string;
