@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { useTheme } from "@/containers/theme-context";
-import React from "react";
-import Switch from "./switch";
-import { Moon, Sun } from "lucide-react";
+import { useTheme } from '@/containers/theme-context';
+import React from 'react';
+import Switch from './switch';
+import { Moon, Sun } from 'lucide-react';
 
 export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
@@ -11,9 +11,9 @@ export default function ThemeSwitch() {
   return (
     <div className="fixed bottom-5 right-5">
       <Switch
-        activeButton={theme === "light" ? <Sun /> : <Moon />}
+        activeButton={theme === 'light' ? <Moon /> : <Sun />}
         hiddenButton={
-          theme === "light" ? <Moon size={14} /> : <Sun size={14} />
+          theme === 'light' ? <Sun size={14} /> : <Moon size={14} />
         }
         setActiveButton={toggleTheme}
       />
