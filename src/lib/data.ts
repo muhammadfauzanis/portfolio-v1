@@ -72,6 +72,19 @@ export const projectsData: ProjectInfo[] = [
 
 export const experiencesData: ExperienceInfo[] = [
   {
+    position: 'Tech Cloud',
+    company: 'GITS Indonesia',
+    description: `Monitored and maintained infrastructure-related devices and systems to ensure operational reliability and contributed to the creation of deployment documentation and daily operational support reports.
+`,
+    duration: 'Apr 2025 - Present',
+  },
+  {
+    position: 'Front-End & Back-End Cohort',
+    company: 'Coding Camp powered by DBS Foundation',
+    description: `Coding Camp is a place to learn technology, powered by DBS Foundation. In this program, I chose the Front-End and Back-End Developer learning path because I have a strong interest in this area.`,
+    duration: 'Feb 2025 - Present',
+  },
+  {
     position: 'Cloud Computing Cohort',
     company: 'Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka',
     description: `Bangkit Academy is a place to upgrade skills in tech and enhance
